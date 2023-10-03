@@ -1,9 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter,Montserrat } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
+import { Container, SSRProvider } from "@/components/bootstrap";
 
 // const inter = Inter({ subsets: ["latin"] });
-const monsterrat = Montserrat({subsets:["latin-ext"]});
+const monsterrat = Montserrat({ subsets: ["latin-ext"] });
 
 export const metadata: Metadata = {
   title: "Next JS Image Gallery",
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
 };
 
 //A root layout is the top-most layout in the root app directory. It is used to define the <html> and <body> tags and other globally shared UI.
+//this is the root layout file
+//During rendering, children will be populated with the route segments the layout is wrapping. These will primarily be the component of a child Layout (if it exists) or Page, but could also be other special files like Loading or Error when applicable.
+
 export default function RootLayout({
   children,
 }: {
@@ -18,7 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={monsterrat.className}>{children}</body>
+      <body className={monsterrat.className}>
+        <SSRProvider>
+          <Container className="py-4">{children}</Container>
+        </SSRProvider>
+      </body>
     </html>
   );
 }
