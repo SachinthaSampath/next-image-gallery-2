@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 export default function Home() {
-  return <div>
+  return (<div>
 
-    
-  </div>;
+    Hello NextJS
+  </div>);
 }
