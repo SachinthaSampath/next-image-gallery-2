@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
-  return (<div>
-
-    Hello NextJS
-  </div>);
+export default async function Home() {
+  await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+  return <div>Hello NextJS</div>;
 }
