@@ -3,7 +3,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div>
+        <div className='text-center w-full'>
             <Image src={"/images/loading-ripple.svg"} width={200} height={200} alt='loading...'/>
         </div>
     );

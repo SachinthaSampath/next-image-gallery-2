@@ -1,8 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { Container, SSRProvider } from "@/components/bootstrap";
+import NavBar from "@/components/NavBar/NavBar";
 
 // const inter = Inter({ subsets: ["latin"] });
 const monsterrat = Montserrat({ subsets: ["latin-ext"] });
@@ -25,7 +26,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={monsterrat.className}>
         <SSRProvider>
-          <Container className="py-4">{children}</Container>
+          <NavBar />
+          <main>
+            <Container className="py-4">{children}</Container>
+          </main>
         </SSRProvider>
       </body>
     </html>

@@ -1,2 +1,2 @@
 "use client";
-export { Button,Container,SSRProvider,Alert,Spinner } from "react-bootstrap";
+export { Button,Container,SSRProvider,Alert,Spinner,Navbar } from "react-bootstrap";
