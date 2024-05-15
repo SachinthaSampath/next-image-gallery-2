@@ -50,17 +50,17 @@ const DynamicPage = async () => {
       </Alert>
 
       <Image
-        src={image.urls.small}
+        src={image?.urls?.small}
         width={width}
         height={height}
-        alt={image.description}
+        alt={image?.description}
         className="rounded shadow mw-100 h-100"
       />
 
       <p>
         by{" "}
-        <Link href={`/users/${image.user.username}`}>
-          {image.user.username}
+        <Link href={`/users/${image?.user?.username}`}>
+          {image?.user?.username}
         </Link>
       </p>
     </div>

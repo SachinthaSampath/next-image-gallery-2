@@ -77,12 +77,12 @@ const SearchPage = () => {
       {searchResults &&
         searchResults.map((image) => (
           <Image
-            src={image.urls.small}
-            alt={image.description}
+            src={image?.urls?.small}
+            alt={image?.description}
             width={250}
             height={250}
-            key={image.id}
-            className={styles.image}
+            key={image?.id}
+            className={styles?.image}
           />
         ))}
     </div>

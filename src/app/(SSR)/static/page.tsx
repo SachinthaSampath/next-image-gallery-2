@@ -44,16 +44,16 @@ const StaticPage = async () => {
       </Alert>
 
       <Image
-        src={image.urls.raw}
+        src={image.urls?.raw}
         width={width}
         height={height}
-        alt={image.description}
+        alt={image?.description}
         className="rounded shadow mw-100 h-100"
       />
       <p>
         by{" "}
-        <Link href={`/users/${image.user.username}`}>
-          {image.user.username}
+        <Link href={`/users/${image.user?.username}`}>
+          {image.user?.username}
         </Link>
       </p>
     </div>
